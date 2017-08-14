@@ -1,4 +1,5 @@
-exports.run = function(client, message, args) {
+/* eslint-disable no-underscore-dangle */
+exports.run = function(bot, message, args) {// eslint-disable-line
   let messagecount = parseInt(args.join(' '));
   message.channel.fetchMessages({
     limit: messagecount

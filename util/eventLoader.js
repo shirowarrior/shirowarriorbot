@@ -6,7 +6,7 @@ module.exports = bot => {
   bot.on('message', reqEvent('message'));
   bot.on('guildMemberAdd', reqEvent('guildMemberAdd'));
   bot.on('guildMemberRemove', reqEvent('guildMemberRemove'));
-  bot.on('guildMemberUpdate', reqEvent('guildMemberUpdate'));
+  //bot.on('guildMemberUpdate', reqEvent('guildMemberUpdate'));
   bot.on('guildBanAdd', reqEvent('guildBanAdd'));
   bot.on('guildBanRemove', reqEvent('guildBanRemove'));
 };

@@ -17,11 +17,11 @@ exports.run = (bot, message, args) => {
 
   if (message.guild.member(user).roles.has(muteRole.id)) {
     message.guild.member(user).removeRole(muteRole).then(() => {
-      bot.channels.get(modlog.id).send({embed}).catch(console.error);
+      bot.channels.get(modlog.id).send({ embed }).catch(console.error);
     });
   } else {
     message.guild.member(user).addRole(muteRole).then(() => {
-      bot.channels.get(modlog.id).send({embed}).catch(console.error);
+      bot.channels.get(modlog.id).send({ embed }).catch(console.error);
     });
   }
 

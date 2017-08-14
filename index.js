@@ -1,11 +1,11 @@
+"powermode.enabled"; true
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 // import lib for dice mechanics for dnd play
-
-var mysql = require('mysql');
+//var mysql = require('mysql');
 //few persite setting and secrent token 
 const config = require('./config.json');
-const ddiff = require('return-deep-diff');
+//const ddiff = require('return-deep-diff');
 //show that server code/server is run in comand line
 const chalk = require('chalk');
 const fs = require('fs');
@@ -15,7 +15,7 @@ require('./util/eventLoader')(bot);
 const log = message => {
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
 };
-
+/*
 // the login details for sql server and select wich data base to use
 var connection = mysql.createConnection({
   host: config.host,
@@ -31,7 +31,7 @@ connection.connect(function (err) {
   }
   console.log('connected as id ' + connection.threadId);
 });
-
+*/
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 fs.readdir('./commands/', (err, files) => {
@@ -79,10 +79,10 @@ bot.elevation = message => {
   if (message.author.id === config.ownerid) permlvl = 4;
   return permlvl;
 };
-
+/*
 // a function that add new member join server to the sql data base
 bot.on("guildMemberAdd", member => {
-  let guild = member.guild;
+  //let guild = member.guild;
   console.log("Trying to insert members " + member.user.username + " into database");
   var info = {
     "membersname": member.user.username,
@@ -99,10 +99,11 @@ bot.on("guildMemberAdd", member => {
     console.log("member Inserted!");
   })
 });
+*/
 
 
-/*
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
+/*
 bot.on('debug', e => {
    console.log(chalk.bgBlue(e.replace(regToken, 'that was redacted')));
  });
