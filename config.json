@@ -1,6 +1,6 @@
 {
     "prefix": "^",
-    "token": "your token"
+    "token": "your token",
     "host": "your sql host server ip",
     "user": "sql user name",
     "password": "sql user password",
